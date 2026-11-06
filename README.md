@@ -1,31 +1,26 @@
-# Cloud Quest — DevOps Island
+# Bhargavi's Experiment Lab (AWS Student Builder Challenge 2026)
 
-A unique, game-inspired portfolio for Bhargavi, built with plain HTML, CSS and JavaScript.
+A lightweight, accessible portfolio in plain HTML, CSS and JavaScript. No build step, no backend.
 
 ## Files
-- `index.html` — page structure and portfolio content
-- `styles.css` — responsive dark fantasy / game interface
-- `script.js` — playable island exploration, keyboard and touch controls, crystal collection, unlockable skill zones and AWS challenge
+- `index.html` page structure
+- `styles.css` lavender/cream notebook design, responsive, reduced-motion friendly
+- `script.js` flask mixer, problem wall, experiment benches, build-journey stepper, "2 AM billing alert" challenge, project notebooks
+- `hunt.js` the "Forgotten server hunt" game (45-second timed round, no backend, keyboard accessible)
+- `amplify.yml` unchanged static build spec
 
-## Play locally
-Open `index.html` in a browser, or run:
+## Preview locally
+Open `index.html` in a browser, or run `python -m http.server 8000` and visit http://localhost:8000.
 
-```bash
-python -m http.server 8000
-```
+## Deploy with AWS Amplify (safe order)
+1. In your repo, create a branch named `redesign` and add these files there. Leave `main` untouched.
+2. In Amplify, open your app, choose Hosting > Branches > Connect branch, and pick `redesign`. Amplify gives it its own URL. Check your account's current free-tier limits first.
+3. Test every tab, button and link on desktop and phone.
+4. When happy, merge `redesign` into `main`. Amplify redeploys the live site.
 
-Then visit `http://localhost:8000`.
+## AWS services used
+- AWS Amplify Hosting (CI/CD from GitHub, HTTPS)
+- No databases, servers, Lambda functions or other billable resources.
 
-## Controls
-- Move: WASD or arrow keys
-- Mobile: use the on-screen directional pad
-- Collect the three crystals by moving close to them
-- Open each unlocked zone to view the skills behind it
-
-## Deploy
-Upload the contents of this folder to AWS Amplify Hosting as a static site. No build command or backend is required.
-
-## Notes
-- This is an original design inspired by the broad idea of a gamified portfolio, not a copy of the reference site.
-- No external game engine, database, API key or paid service is required.
-- Project descriptions preserve the supplied portfolio's stated statuses: NekoMemo is live; AWS Cost Guardian is a concept/in development; S3 and Lambda/SNS are hands-on labs.
+## Honesty notes
+Statuses on the project notebooks are intentional: NekoMemo is live, AWS Cost Guardian is a concept, the AWS labs are hands-on learning.
